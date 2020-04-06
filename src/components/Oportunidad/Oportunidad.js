@@ -9,7 +9,7 @@ const Oportunidad = (props) => {
   useEffect(() => {
     const registro = async () => {
       const $registro = await axios.get(
-        `http://localhost:5000/propuestas/${id}`
+        `https://prueba.geinsoft.com/propuestas/${id}`
       );
       console.log($registro.data[0].data);
       guardarDatos($registro.data[0].data);

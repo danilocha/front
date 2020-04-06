@@ -6,7 +6,7 @@ import axios from "axios";
 const Inicio = () => {
   const [ids, guardarIds] = useState([]);
   const traerIds = async () => {
-    const registros = await axios.get("http://localhost:5000/propuestas");
+    const registros = await axios.get("https://prueba.geinsoft.com/propuestas");
 
     guardarIds(registros.data.reverse());
   };
