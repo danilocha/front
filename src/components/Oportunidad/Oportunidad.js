@@ -8,16 +8,13 @@ const Oportunidad = (props) => {
   const id = props.match.params.id;
   useEffect(() => {
     const registro = async () => {
-      const $registro = await axios.get(
-        `https://prueba.geinsoft.com/propuestas/${id}`
-      );
-      console.log($registro.data[0].data);
+      const $registro = await axios.get(`http://prueba.geinsoft.com/${id}`);
+
       guardarDatos($registro.data[0].data);
     };
     registro();
   }, []);
 
-  console.log(datos);
   const contenidoPagina = datos ? (
     <Informacion data={datos} />
   ) : (

@@ -6,7 +6,7 @@ import axios from "axios";
 const Inicio = () => {
   const [ids, guardarIds] = useState([]);
   const traerIds = async () => {
-    const registros = await axios.get("https://prueba.geinsoft.com/propuestas");
+    const registros = await axios.get("http://prueba.geinsoft.com/propuestas");
 
     guardarIds(registros.data.reverse());
   };
@@ -20,7 +20,7 @@ const Inicio = () => {
   return (
     <>
       <h1 className="text-center my-5 ">Bienvenido a scrAPPing</h1>
-      <table className="table table-striped">
+      <table className="table table-striped mb-5">
         <thead>
           <tr>
             <th scope="col">#</th>
